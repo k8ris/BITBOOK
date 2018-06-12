@@ -24,7 +24,7 @@
 
 .footer {
   font-size:25px;
-  background-color: rgb(69, 129, 218);
+  background-color: rgb(8, 82, 192);
   text-align: center;
   height: 80px;
   padding-top: 30px;
@@ -36,7 +36,7 @@
 .navbar{
   position: relative;
   display: flex;
-  background-color: rgb(69, 129, 218);
+  background-color: rgb(8, 82, 192);
   height: 110px;
   font-size: 20px;
   color: white;

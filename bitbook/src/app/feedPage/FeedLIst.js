@@ -31,47 +31,15 @@ class FeedList extends React.Component {
                     return (<div> <img src={post.imageUrl} width="854" height="400" /></div>)
                 }
             })
-
-            }
+            
+        }
         </div>)
     }
-
-
-
-
-
-
-
-
-
-    // return (
-    //     <div>
-    //         {this.state.posts.map(post => {
-    //             return (
-
-
-    //                 <div>
-    //                     <div>
-    //                         <iframe width="854" height="400"
-    //                             src={post.videoUrl} allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    //                     </div>
-    //                     <div>
-    //                         
-    //                     </div>
-    //                     <div>
-    //                         <img src={post.imageUrl} width="800" height="400" />
-    //                     </div>
-    //                 </div>
-    //             )
-    //         }
-
-    //         )}
-    //     </div>
-    // );
-
+    
+    
 }
-
 export default FeedList;
+
 
 
 
