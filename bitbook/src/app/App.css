@@ -11,7 +11,7 @@
   background-color: #222;
   height: 150px;
   padding: 20px;
-  color: white;
+  color: black;
 }
 
 .App-title {
@@ -22,7 +22,51 @@
   font-size: large;
 }
 
+.footer {
+  font-size:25px;
+  background-color: rgb(69, 129, 218);
+  text-align: center;
+  height: 80px;
+  padding-top: 30px;
+  margin-top: 790px;
+  margin-bottom: 0px;
+  color: white;
+
+}
+.navbar{
+  position: relative;
+  display: flex;
+  background-color: rgb(69, 129, 218);
+  height: 110px;
+  font-size: 20px;
+  color: white;
+  padding-right: 350px;
+}
+.h4header{
+  font-size: 45px;
+  padding-left: 340px;
+}
+
+.headerFeed{
+  padding-right: 10px;
+}
+.headerPeople{
+  border-right: 2px solid white;
+  border-left: 2px solid white; 
+  padding-left: 10px;
+  padding-right:10px;
+}
+
+.headerProfile{
+  padding-left:10px; 
+  padding-right: 70px;
+}
+.nav-link{
+  color: white !important;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
