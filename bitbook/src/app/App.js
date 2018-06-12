@@ -4,16 +4,18 @@ import { Switch, Route } from 'react-router-dom';
 import Header from './partials/Header';
 import Footer from './partials/Footer';
 
+import FeedList from './feedPage/FeedLIst';
 
 class App extends Component {
   render() {
     return (
       <div>
-         <Header />
+        <Header />
+        <FeedList />
         <Switch>
 
         </Switch>
-        <Footer />  
+        <Footer />
       </div>
     );
   }
