@@ -48,9 +48,12 @@ class FeedList extends React.Component {
                     </div>)
                 }
             })
+
             }
-        </ div>)
+        </div>)
+
     }
+
 }
 
 export default FeedList;
