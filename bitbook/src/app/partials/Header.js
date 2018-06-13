@@ -8,14 +8,14 @@ const Header = props => {
                 <div className="collapse navbar-collapse">
                     <h4 className="h4header">BIT-Book</h4>
                 </div>
-        <div className="right">
-         <ul className="navbar-nav">
-         
-         <li className="nav-item headerFeed">
-                <Link className="nav-link" to="/Feed">Feed</Link> </li>
-            <li className="nav-item" />
-            <li className="nav-item headerPeople">
-                 <Link className="nav-link" to="/People">People</Link></li>
+                <div className="right">
+                    <ul className="navbar-nav">
+
+                        <li className="nav-item headerFeed">
+                            <Link className="nav-link" to="/Feed">Feed</Link> </li>
+                        <li className="nav-item" />
+                        <li className="nav-item headerPeople">
+                            <Link className="nav-link" to="/People">People</Link></li>
 
                         <li className="nav-item headerProfile">
                             <Link className="nav-link" to="/Profile">Profile</Link>
