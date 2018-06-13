@@ -17,7 +17,10 @@ class App extends Component {
         <Header />
         <Switch>
 
+<<<<<<< HEAD
           <Route exact path='/' component={FeedList} />
+=======
+>>>>>>> add button
           <Route path='/Feed' component={FeedList} />
           <Route path='/People' component={PeoplePage} />
           <Route path='/Profile' component={ProfilePage} />

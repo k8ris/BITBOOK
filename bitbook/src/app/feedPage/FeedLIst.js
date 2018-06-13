@@ -1,6 +1,6 @@
 import React from 'react';
 import FetchData from "../../service/ServiceGetData"
-
+import FeedButton from './FeedButton'
 
 class FeedList extends React.Component {
     constructor(props) {
@@ -50,8 +50,13 @@ class FeedList extends React.Component {
             })
 
             }
+<<<<<<< HEAD
         </div>)
 
+=======
+            <FeedButton  />
+        </ div>)
+>>>>>>> add button
     }
 }
 
