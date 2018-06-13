@@ -7,8 +7,3 @@ import { HashRouter } from 'react-router-dom';
 
 ReactDOM.render(<HashRouter><App /></HashRouter>, document.getElementById('root'));
 registerServiceWorker();
-<<<<<<< HEAD
-=======
-// ReactDOM.render(<App />, document.getElementById('root'));
-// registerServiceWorker();
->>>>>>> conect pages with route
