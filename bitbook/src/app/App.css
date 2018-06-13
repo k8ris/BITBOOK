@@ -69,6 +69,10 @@
 
 
 
+
+
+
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
@@ -79,7 +83,6 @@
   text-align: center;
   margin: 50px;
   box-shadow: 40px gray;
-<<<<<<< HEAD
 }
 
 .postBody {
@@ -110,10 +113,6 @@ text-align: left;
   float: right;
   
 }
-
-
-=======
-} 
 
 /* FeedButton */ 
 
@@ -345,4 +344,4 @@ h3{
   margin: auto;
   right: 20px;
 }
->>>>>>> add button
+
