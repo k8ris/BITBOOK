@@ -12,6 +12,7 @@ const FeedButton = (props) => {
 
             {/* <div class="nd5 nds" data-toggle="tooltip" data-placement="left" data-original-title="Simone"></div> */}
             <div class="nd4 nds" data-toggle="tooltip" data-placement="left" onClick={props.showPost} ><img class="reminder" />
+            <p>Post</p>
             </div>
 
             <div class="nd3 nds" data-toggle="tooltip" data-placement="left" ><img class="reminder" />
