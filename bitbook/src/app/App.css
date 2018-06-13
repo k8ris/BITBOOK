@@ -70,3 +70,8 @@
   to { transform: rotate(360deg); }
 }
 
+.feedPosts {
+  text-align: center;
+  margin: 50px;
+  box-shadow: 40px gray;
+}

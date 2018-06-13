@@ -18,7 +18,7 @@ class FeedList extends React.Component {
 
     render() {
 
-        return (<div>
+        return (<div className='feedPosts'>
             {this.state.posts.map(post => {
                 if (post.type === 'video') {
                     return (<iframe width="854" height="400" src={post.videoUrl} allow="autoplay; encrypted-media" allowfullscreen></iframe>)
@@ -31,12 +31,11 @@ class FeedList extends React.Component {
                     return (<div> <img src={post.imageUrl} width="854" height="400" /></div>)
                 }
             })
-            
-        }
+            }
         </div>)
     }
-    
-    
+
+
 }
 export default FeedList;
 
