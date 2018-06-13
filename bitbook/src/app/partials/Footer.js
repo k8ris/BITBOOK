@@ -1,7 +1,7 @@
 import React from 'react';
 const Footer = props => {
-    return <div className="">
-        <h4 className="footer">@ BIT-blog {props.name}</h4>
+    return <div className="footer">
+        <h4>@ BIT-blog {props.name}</h4>
     </div>;
 };
 
