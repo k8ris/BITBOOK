@@ -11,11 +11,12 @@ class FetchData {
                 headers: {
                     'key': apiKey,
                     'SessionId': sessionId
-
                 }
             }).then(response => response.json()).then(data => data);
         // console.log(data);
     }
+
+
 }
 
 export default new FetchData()
