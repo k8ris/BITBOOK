@@ -23,6 +23,13 @@ const FeedList = (props) => {
                     <br />
                     <br />
                     <p className="card-text">Text post</p>
+    {/* return (<div className="container"><div className='feedPosts'>
+    {props.posts.map(post => {
+        if (post.type === 'video') {
+            return (<div className="postBody">
+                <iframe src={post.videoUrl} />
+                <div>
+                    <p className="card-text">Video post</p> */}
                     <a href="#" className="card-link">Another link</a>
                 </div>)
             }
@@ -38,6 +45,12 @@ const FeedList = (props) => {
         }
     </div>)
 }
+//     })
+
+//     }
+// </div></div>)
+
+
 
 export default FeedList;
 
