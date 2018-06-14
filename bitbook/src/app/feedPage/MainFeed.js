@@ -1,7 +1,8 @@
 import React from 'react';
 import FetchData from "../../service/ServiceGetData";
 import FeedButton from './FeedButton';
-import FeedList from './FeedList'
+import FeedList from './FeedList';
+import Modals from './Modals'
 
 class MainFeed extends React.Component {
     constructor(props) {
@@ -19,9 +20,9 @@ class MainFeed extends React.Component {
 
     render() {
 
-        return (<div className='feedPosts'>
+        return (<div className='feedPosts'> 
+            <Modals/>
             <FeedList posts={this.state.posts} />
-            <FeedButton />
         </ div>)
     }
 }
