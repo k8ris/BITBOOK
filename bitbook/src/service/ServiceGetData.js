@@ -14,8 +14,27 @@ class FetchData {
 
                 }
             }).then(response => response.json()).then(data => data);
-        // console.log(data);
     }
+
+    getUsers = () => {
+        return fetch((`${apiUrl}/profile`),
+            {
+                method: 'get',
+                headers: {
+                    'key': apiKey,
+                    'SessionId': sessionId
+
+                }
+            }).then(response => response.json()).then(data => data);
+
+    }
+
+  
+
+
+
+
+
 }
 
 export default new FetchData()
