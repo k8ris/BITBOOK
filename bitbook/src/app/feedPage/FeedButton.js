@@ -12,13 +12,13 @@ const FeedButton = (props) => {
 
             {/* <div class="nd5 nds" data-toggle="tooltip" data-placement="left" data-original-title="Simone"></div> */}
             <div class="nd4 nds" data-toggle="tooltip" data-placement="left" onClick={props.showPost} ><img class="reminder" />
-            <p class="letter">Post</p>
+                <p class="letter">Post</p>
             </div>
 
-            <div class="nd3 nds" data-toggle="tooltip" data-placement="left" ><img class="reminder" />
+            <div class="nd3 nds" data-toggle="tooltip" data-placement="left" onClick={props.showImage}><img class="reminder" />
                 <p class="letter">Image</p>
             </div>
-            <div class="nd1 nds" data-toggle="tooltip" data-placement="left" ><img class="reminder" />
+            <div class="nd1 nds" data-toggle="tooltip" data-placement="left" onClick={props.showVideo}><img class="reminder" />
                 <p class="letter">Video</p>
             </div>
 
@@ -35,9 +35,8 @@ const FeedButton = (props) => {
     )
 
 
-
 }
 
 
 
-export default FeedButton
+export default FeedButton;
