@@ -27,9 +27,6 @@ handlerCloseModal= ()=>{
 
 
 
-
-
-
 render(){return (
 <div>
 
@@ -37,14 +34,22 @@ render(){return (
 <FeedButton showPost={this.handlerOpenModal} showImage={this.handlerOpenModal} showVideo={this.handlerOpenModal} />
 
 <Modal isOpen={this.state.showModal} contentLabel='newPost'>
-<h1>New Post</h1>
-{/* ubaciti dugme */}
-<div class="input-group mb-3">
-  <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2"/>
-  <div class="input-group-append">
-    <button class="btn btn-outline-secondary" type="button" >Post</button> 
+  <div class="modal-dialog" role="document">
+    <div className="modal-content"> 
+<div className="modal-header">
+        <h5 class="modal-title">New post</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" onClick={this.handlerCloseModal}>
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Post content</p>
+      </div>
+      <div class="modal-footer">
+      <button type="button" class="btn btn-primary">Post</button>
+      </div>
+      </div>
   </div>
-</div>
 </Modal> 
 
 
@@ -52,8 +57,17 @@ render(){return (
 
 </div>)
 
+
 }
 
 } 
 
 export default Modals;
+
+
+
+
+
+
+
+

@@ -4,7 +4,7 @@ import FeedButton from './FeedButton'
 
 const FeedList = (props) => {
 
-    return (<div className='feedPosts'>
+    return (<div className="container"><div className='feedPosts'>
     {props.posts.map(post => {
         if (post.type === 'video') {
             return (<div className="postBody">
@@ -36,7 +36,7 @@ const FeedList = (props) => {
     })
 
     }
-</div>)
+</div></div>)
 
 
 
