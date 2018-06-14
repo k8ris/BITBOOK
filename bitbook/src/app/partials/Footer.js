@@ -1,7 +1,7 @@
 import React from 'react';
 const Footer = props => {
     return <div className="footer">
-        <h4>@ BIT-blog {props.name}</h4>
+        <h5>@ BIT-blog Team members (Vladimir, Kristina, Zeljko){props.name}</h5>
     </div>;
 };
 
