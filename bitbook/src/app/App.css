@@ -41,7 +41,6 @@
   font-size: 20px;
   color: white;
   padding-right: 350px;
-  margin-top: 20px;
 }
 .h4header{
   font-size: 45px;
@@ -52,8 +51,8 @@
   padding-right: 10px;
 }
 .headerPeople{
-  border-right: 2px solid white;
-  border-left: 2px solid white; 
+  border-right: 1px solid white;
+  border-left: 1px solid white; 
   padding-left: 10px;
   padding-right:10px;
 }
@@ -76,8 +75,8 @@
 
 .feedPosts {
   text-align: center;
-  margin: 50px;
   box-shadow: 40px gray;
+  margin: 0px 0px;
 }
 
 .postBody {
@@ -360,4 +359,26 @@ h3{
   cursor: pointer;
   margin-bottom: 37px;
   margin-right: 42px;
+}
+
+.profilePic {
+  border-radius: 50%;
+  height: 400px;
+  width: 400px;
+  margin-bottom: 77px;
+  margin-top: 70px;
+}
+
+.profileName{
+  margin-bottom: 50px;
+
+}
+
+.btn {
+  margin: 25px 40px;
+  background: white;
+}
+
+.badge {
+  background:gainsboro;
 }
