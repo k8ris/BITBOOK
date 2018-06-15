@@ -20,8 +20,8 @@ class MainFeed extends React.Component {
 
     render() {
 
-        return (<div className='feedPosts'> 
-            <Modals/>
+        return (<div className='feedPosts'>
+            <Modals />
             <FeedList posts={this.state.posts} />
         </ div>)
     }

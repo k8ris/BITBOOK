@@ -7,6 +7,7 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import MainFeed from './feedPage/MainFeed';
 import ProfilePage from './profilePage/ProfilePage';
 import PeoplePage from './peoplePage/PeoplePage';
+import PostPage from './postPage/PostPage'
 
 
 class App extends Component {
@@ -18,6 +19,7 @@ class App extends Component {
           <Route exact path='/' component={MainFeed} />
           <Route path='/Feed' component={MainFeed} />
           <Route path='/People' component={PeoplePage} />
+          <Route path='/:type/:id' component={PostPage} />
           <Route path='/Profile' component={ProfilePage} />
         </Switch>
         <Footer />
