@@ -10,8 +10,6 @@ class PostPage extends React.Component {
         };
     }
 
-
-
     componentDidMount() {
         const type = this.props.match.params.type;
         const id = this.props.match.params.id;

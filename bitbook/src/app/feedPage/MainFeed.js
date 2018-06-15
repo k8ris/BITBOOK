@@ -1,7 +1,7 @@
 import React from 'react';
 import FetchData from "../../service/ServiceGetData";
 import FeedButton from './FeedButton';
-import FeedList from './FeedList';
+import FeedLIst from './FeedLIst';
 import Modals from './Modals'
 
 class MainFeed extends React.Component {
@@ -22,7 +22,7 @@ class MainFeed extends React.Component {
 
         return (<div className='feedPosts'>
             <Modals />
-            <FeedList posts={this.state.posts} />
+            <FeedLIst posts={this.state.posts} />
         </ div>)
     }
 }
