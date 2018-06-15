@@ -50,11 +50,19 @@ class FetchData {
 
     }
 
+    // sendPost = () => {
+    //     return fetch()
+    //     {
+    //         method: 'POST',
+    //             headers: {
+    //             'key': apiKey,
+    //                 'SessionId': sessionId
 
-
-
+    //         }
+    //         body: JSON.stringify(data),
+    //     }
+    // }
 }
-
 export default new FetchData();
 
 
