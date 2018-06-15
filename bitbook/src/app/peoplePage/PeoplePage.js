@@ -1,5 +1,5 @@
 import React from 'react';
-import FetchData from "../../service/ServiceGetData";
+// import FetchData from "../../service/ServiceGetData";
 
 class PeoplePage extends React.Component {
     constructor(props) {
