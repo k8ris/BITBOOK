@@ -50,9 +50,6 @@ class FetchData {
 
     }
 
-
-
-
 }
 
 export default new FetchData();
