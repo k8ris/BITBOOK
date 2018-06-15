@@ -10,11 +10,11 @@ import PeoplePage from './peoplePage/PeoplePage';
 import PostPage from './postPage/PostPage'
 
 
-class App extends Component {
+class App extends Component { 
   render() {
     return (
       <div>
-        <Header />
+      <Header />
         <Switch>
           <Route exact path='/' component={MainFeed} />
           <Route path='/Feed' component={MainFeed} />
@@ -22,7 +22,7 @@ class App extends Component {
           <Route path='/:type/:id' component={PostPage} />
           <Route path='/Profile' component={ProfilePage} />
         </Switch>
-        <Footer />
+      <Footer />
       </div >
     );
   }

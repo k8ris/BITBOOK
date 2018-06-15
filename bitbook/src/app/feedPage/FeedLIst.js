@@ -2,7 +2,7 @@ import React from 'react';
 import FetchData from "../../service/ServiceGetData"
 import FeedButton from './FeedButton'
 import { Link } from 'react-router-dom'
-const FeedList = (props) => {
+const FeedLIst = (props) => {
 
     return (<div className='feedPosts'>
         {props.posts.map(post => {
@@ -46,7 +46,7 @@ const FeedList = (props) => {
 
 
 
-export default FeedList;
+export default FeedLIst;
 
 
 
