@@ -1,10 +1,11 @@
 import React from 'react';
 
-const ProfileList = (props) => {
+const ProfileItem = (props) => { 
+
     return (
 
     <div>
-        <img className="profilePic" src={props.profile.avatarUrl} />
+        <img className="profilePic" src={props.profile.avatarUrl} alt='img' />
         <h4 className="profileName">{props.profile.name}</h4>
         <p>{props.profile.about}</p> 
 
@@ -18,9 +19,7 @@ const ProfileList = (props) => {
     </div>)
 }
 
-
-
-export default ProfileList;
+export default ProfileItem;
 
 
 

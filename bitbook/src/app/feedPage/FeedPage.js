@@ -1,10 +1,9 @@
 import React from 'react';
 import FetchData from "../../service/ServiceGetData";
-import FeedButton from './FeedButton';
 import FeedLIst from './FeedLIst';
 import Modals from './Modals'
 
-class MainFeed extends React.Component {
+class FeedPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -20,10 +19,13 @@ class MainFeed extends React.Component {
 
     render() {
 
-        return (<div className='feedPosts'>
+        return (
+        
+        <div className='feedPosts'>
             <Modals />
             <FeedLIst posts={this.state.posts} />
         </ div>)
     }
 }
-export default MainFeed;
+
+export default FeedPage;

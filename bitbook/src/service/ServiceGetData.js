@@ -29,9 +29,9 @@ class FetchData {
 
     getPost = (type, id) => {
         let url = ''
-        if (type == 'video') { url = `${apiUrl}/VideoPosts/${id}` }
-        else if (type == 'image') { url = `${apiUrl}/ImagePosts/${id}` }
-        else if (type == 'text') { url = `${apiUrl}/TextPosts/${id}` }
+        if (type === 'video') { url = `${apiUrl}/VideoPosts/${id}` }
+        else if (type === 'image') { url = `${apiUrl}/ImagePosts/${id}` }
+        else if (type === 'text') { url = `${apiUrl}/TextPosts/${id}` }
 
         return fetch((url),
             {

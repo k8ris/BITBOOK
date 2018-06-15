@@ -1,5 +1,5 @@
 import React from 'react';
-import ProfileList from './ProfileList';
+import ProfileItem from './ProfileItem';
 import FetchData from '../../service/ServiceGetData';
 
 class ProfilePage extends React.Component {
@@ -21,7 +21,7 @@ class ProfilePage extends React.Component {
     render() {
 
         return (<div className='feedPosts'>
-            <ProfileList profile={this.state.profilePosts
+            <ProfileItem profile={this.state.profilePosts
             } />
         </ div>)
     }

@@ -21,9 +21,9 @@ class PostPage extends React.Component {
 
     pagePost() {
         const pState = this.state.post
-        if (pState.type == 'video') { return <div className="frameCard">  <iframe src={pState.videoUrl} /></div> }
-        else if (pState.type == 'image') { return <div className="imgCard"> <img src={pState.imageUrl} /></div> }
-        else if (pState.type == 'text') { return <div className="txtCard">{pState.text}</div> }
+        if (pState.type === 'video') { return <div className="frameCard">  <iframe src={pState.videoUrl} title='yt video' /></div> }
+        else if (pState.type === 'image') { return <div className="imgCard"> <img src={pState.imageUrl} alt='img' /></div> }
+        else if (pState.type === 'text') { return <div className="txtCard">{pState.text}</div> }
     }
 
     render() {
