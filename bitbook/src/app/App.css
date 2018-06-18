@@ -24,42 +24,44 @@
 
 .footer {
   font-size:25px;
-  background-color:rgb(43, 102, 197);
+  background-color:rgb(23, 63, 126);
   text-align: center;
   height: 60px;
   padding-top: 19px;
-  margin-top: 50px;
+  margin-top: 53px;
   margin-bottom: 0px;
   color: white;
+  border-top: 1.2px solid black;
 
 }
 .navbar{
   position: relative;
   display: flex;
-  background-color: rgb(43, 102, 197);
+  background-color: rgb(23, 63, 126);
   height: 110px;
   font-size: 20px;
   color: white;
   padding-right: 350px;
+  border-bottom: 1.2px solid black; 
 }
 .h4header{
   font-size: 45px;
-  padding-left: 340px;
+  padding-left: 300px;
 }
 
 .headerFeed{
   padding-right: 10px;
 }
 .headerPeople{
-  border-right: 1px solid white;
-  border-left: 1px solid white; 
+  /* border-right: 1px solid white;
+  border-left: 1px solid white;  */
   padding-left: 10px;
   padding-right:10px;
 }
 
 .headerProfile{
   padding-left:10px; 
-  padding-right: 70px;
+  padding-right: 500px;
 }
 .nav-link{
   color: white !important; 
@@ -74,7 +76,8 @@
   text-align: center;
   box-shadow: 40px gray;
   margin: 0px 0px;
-  background:#F6F1B6;
+  background: white;
+  margin-bottom: 0px !important;
 }
 
 .postBody {
@@ -122,19 +125,22 @@
 }
 
 .cardStyle {
-  border: 10px solid orange;
-  background: white;
+  border: 1px solid rgb(102, 115, 173);
+  background: whitesmoke;
+  height: 55px
 }
 
 .cardStyleImg{
-  border: 10px solid grey;
-  background: white;
-  
+ 
+  height: 55px;
+  background-color:whitesmoke;
+  border: 1px solid gray;
 }
 
 .cardStyleTxt{
-  border: 10px solid #99ff99;
-  background: lightpink;
+  background-color:whitesmoke;
+  border: 1px solid gray;
+  height: 55px
   
 }
 
@@ -174,24 +180,24 @@ h3{
   background: #FFF;
   margin-top: 10px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); 
-  transition: all 0.3s; 
+  transition: all 5s; 
   border-radius: 3px;
 }
 
 #presentation:hover{
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-  transition: all 0.3s;
+  transition: all 5s;
   transform: translateZ(10px);
 }
 
 #floating-button{
-  width: 85px;
-  height: 85px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background: #db4437;
   position: fixed;
-  bottom: 70px;
-  right: 70px;
+  bottom: 63px;
+  right: 182px;
   cursor: pointer;
   box-shadow: 0px 2px 5px #666;
 }
@@ -207,12 +213,12 @@ h3{
   text-align: center;
   padding: 0;
   margin: 0;
-  line-height: 82px;
-  font-size: 50px;
+  line-height: 92px;
+  font-size: 80px;
   font-family: 'Roboto';
   font-weight: 400;
-  animation: plus-out 0.3s;
-  transition: all 0.3s;
+  animation: plus-out 3s;
+  transition: all 3s;
 }
 
 #container-floating{
@@ -224,16 +230,16 @@ h3{
   z-index: 50px;
 }
 
-#container-floating:hover{
+/* #container-floating:hover{
   height: 400px;
   width: 90px;
   padding: 30px;
 }
 
 #container-floating:hover .plus{
-  animation: plus-in 0.15s linear;
+  animation: plus-in 0.50s linear;
   animation-fill-mode: forwards;
-}
+} */
 
 .edit{
   position: absolute;
@@ -247,14 +253,14 @@ h3{
   opacity: 0;
   margin: auto;
   line-height: 65px;
-  transform: rotateZ(-70deg);
-  transition: all 0.3s;
-  animation: edit-out 0.3s;
+  transform: rotateZ(-180deg);
+  transition: all 10s;
+  animation: edit-out 3s;
 }
 
 #container-floating:hover .edit{
-  animation: edit-in 0.2s;
-   animation-delay: 0.1s;
+  animation: edit-in 1s;
+   animation-delay: 10s;
   animation-fill-mode: forwards;
 }
 
@@ -280,29 +286,36 @@ h3{
 
 .nd1{
   background: #d3a411;
-  right: 40px;
-  bottom: 130px;
-  animation-delay: 0.2s;
-    animation: bounce-out-nds 0.3s linear;
+  right: 150px;
+  bottom: 128px;
+  animation-delay: 2s;
+  animation: bounce-out-nds 1s linear;
   animation-fill-mode:  forwards;
+  width:85px !important;
+  height: 85px !important;
 }
 
 .nd3{
   background: #3c80f6;
-  right: 40px;
-  bottom: 220px;
-  animation-delay: 0.15s;
-    animation: bounce-out-nds 0.15s linear;
+  right: 150px;
+  bottom: 214px;
+  animation-delay: 4s;
+  animation: bounce-out-nds 1s linear;
   animation-fill-mode:  forwards;
+  width:85px !important;
+  height: 85px !important;
+
 }
 
 .nd4{
   background: #ba68c8;
-  right: 40px;
-  bottom: 310px;
-  animation-delay: 0.1s;
-    animation: bounce-out-nds 0.1s linear;
+  right: 150px;
+  bottom: 300px;
+  animation-delay: 6s;
+  animation: bounce-out-nds 1s linear;
   animation-fill-mode:  forwards;
+  width:85px !important;
+  height: 85px !important
 }
 
 .nd5{
@@ -310,8 +323,8 @@ h3{
   background-size: 100%;
   right: 40px;
   bottom: 300px;
-  animation-delay: 0.08s;
-  animation: bounce-out-nds 0.1s linear;
+  /* animation-delay: 0.08s; */
+  /* animation: bounce-out-nds 0.9s linear; */
   animation-fill-mode:  forwards;
 }
 
@@ -326,25 +339,24 @@ h3{
 }
 
 #container-floating:hover .nds{
-  
-  animation: bounce-nds 0.1s linear;
+  animation: bounce-nds 0s linear;
   animation-fill-mode:  forwards;
 }
 
 #container-floating:hover .nd3{
-  animation-delay: 0.08s;
-}
-#container-floating:hover .nd4{
-  animation-delay: 0.15s;
-}
-#container-floating:hover .nd5{
   animation-delay: 0.2s;
 }
+#container-floating:hover .nd4{
+  animation-delay: 0.5s;
+}
+/* #container-floating:hover .nd5{
+  animation-delay: 0.9s;
+} */
 
 .letter{
-  font-size: 15px;
+  font-size: 25px;
   font-family: 'Roboto';
-  color: white;
+  color:black;
   position: absolute;
   left: 0;
   right: 0;
@@ -352,8 +364,9 @@ h3{
   top: 0;
   bottom: 0;
   text-align: center;
-  line-height: 40px;
+  line-height: 60px;
   margin-top: 12px;
+  margin-left:92px;
 
 }
 
@@ -409,8 +422,8 @@ h3{
   border-radius: 50%;
   height: 400px;
   width: 400px;
-  margin-bottom: 77px;
-  margin-top: 70px;
+  margin-bottom: 60px;
+  margin-top: 60px;
 }
 
 .profileName{
@@ -420,10 +433,22 @@ h3{
 
 .btn {
   margin: 25px 40px;
-  background: #F6F1B6;
+  background: rgb(255, 255, 255);
 }
 
 .badge {
-  background:gainsboro;
+  background:rgb(238, 232, 232);
+  height: 50px;
+  width: 170px;
+  padding-top: 16px !important;
+  font-size: 16px !important;
+
+}
+h5{
+  font-size: 14px !important;
+}
+.SpacePeople{
+padding: 220px 0px;
+margin: 220px 0px;
 }
 

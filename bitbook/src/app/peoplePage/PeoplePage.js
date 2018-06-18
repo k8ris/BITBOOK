@@ -25,6 +25,7 @@ class PeoplePage extends React.Component {
 
             <div>
                 {this.state.users.map(user => <PeopleItem user={user} />)}
+
             </div>
         )
     }
