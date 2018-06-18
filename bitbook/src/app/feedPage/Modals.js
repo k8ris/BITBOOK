@@ -12,26 +12,17 @@ class Modals extends React.Component {
     }
 
     handlerInputText = (event) => {
-
         this.setState({ inputText: event.target.value })
-
     }
-
     handlerOpenModal = () => {
-
         this.setState({ showModal: true });
     }
-
     handlerCloseModal = () => {
-
         this.setState({ showModal: false });
     }
-
     render() {
         return (
             <div>
-
-
                 <FeedButton showPost={this.handlerOpenModal} showImage={this.handlerOpenModal} showVideo={this.handlerOpenModal} />
 
                 <Modal isOpen={this.state.showModal} contentLabel='newPost'>
