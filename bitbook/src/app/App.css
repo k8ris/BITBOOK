@@ -75,7 +75,7 @@
   box-shadow: 40px gray;
   margin: 0px 0px;
   background: white;
-  margin-bottom: 2px;
+  margin-bottom: 0px !important;
 }
 
 .postBody {
