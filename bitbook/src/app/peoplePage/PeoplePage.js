@@ -1,18 +1,31 @@
 import React from 'react';
-// import FetchData from "../../service/ServiceGetData";
+import fetchData from '../../service/ServiceGetData';
+import PeopleItem from './PeopleItem';
 
 class PeoplePage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            post: {},
-            // postVideo: {}
+            users: [],
+
         };
     }
 
+    componentDidMount() {
+        fetchData.GetUsers()
+            .then(users => this.setState({ users: users }))
+
+    };
+
+
 
     render() {
-        return (<div></div>
+
+        return (
+
+            <div>
+                {this.state.users.map(user => <PeopleItem user={user} />)}
+            </div>
         )
     }
 }

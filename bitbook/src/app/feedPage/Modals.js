@@ -1,19 +1,20 @@
 import React from 'react';
 import Modal from 'react-modal';
-import FeedButton from './FeedButton'
+import FeedButton from './FeedButton';
+import fetchData from '../../service/ServiceGetData';
 
 class Modals extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             showModal: false,
-            inputText: ''
+            text: ''
         };
     }
 
     handlerInputText = (event) => {
 
-        this.setState({ inputText: event.target.value })
+        this.setState({ text: event.target.value })
 
     }
 
@@ -26,6 +27,25 @@ class Modals extends React.Component {
 
         this.setState({ showModal: false });
     }
+
+
+    post = () => {
+
+        fetchData.sendPost({ text: this.state.text })
+            .then(() => {
+                this.handlerCloseModal()
+                fetchData.getPosts().then(post => {
+                    this.props.set
+                })
+            })
+    }
+
+    componentDidMount() {
+
+    }
+
+
+
 
     render() {
         return (
@@ -45,10 +65,10 @@ class Modals extends React.Component {
                             </div>
                             <div class="modal-body">
                                 <p>Post content</p>
-                                <input type='text' value={this.state.inputText} onChange={this.handlerInputText} />
+                                <input type='text' value={this.state.text} onChange={this.handlerInputText} />
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-primary">Post</button>
+                                <button type="button" onClick={this.post} class="btn btn-primary">Post</button>
                             </div>
                         </div>
                     </div>

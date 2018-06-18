@@ -47,17 +47,34 @@ class FetchData {
 
     }
 
-    // sendPost = () => {
-    //     return fetch()
-    //     {
-    //         method: 'POST',
-    //             headers: {
-    //             'key': apiKey,
-    //                 'SessionId': sessionId
+    sendPost = (data) => {
+        return fetch((`${apiUrl}/TextPosts`),
+            {
+                method: 'POST',
+                headers: {
+                    'key': apiKey,
+                    'SessionId': sessionId,
+                    'content-type': 'application/json'
+                },
 
-    //         }
-    //         body: JSON.stringify(data),
-    //     }
-    // }
+                body: JSON.stringify(data),
+            })
+    }
+
+    GetUsers = () => {
+        return fetch((`${apiUrl}/users`),
+            {
+                method: 'get',
+                headers: {
+                    'key': apiKey,
+                    'SessionId': sessionId
+                }
+            }).then(response => response.json()).then(data => data)
+    }
+
+
+
+
+
 }
 export default new FetchData();

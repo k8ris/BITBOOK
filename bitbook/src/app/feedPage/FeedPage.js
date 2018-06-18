@@ -20,11 +20,11 @@ class FeedPage extends React.Component {
     render() {
 
         return (
-        
-        <div className='feedPosts'>
-            <Modals />
-            <FeedLIst posts={this.state.posts} />
-        </ div>)
+
+            <div className='feedPosts'>
+                <Modals />
+                <FeedLIst set={this.state.posts} posts={this.state.posts} />
+            </ div>)
     }
 }
 
