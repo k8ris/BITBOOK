@@ -12,7 +12,10 @@ class PeoplePage extends React.Component {
 
 
     render() {
-        return (<div></div>
+        return (
+            <div >
+                <div className="SpacePeople"></div>
+            </div>
         )
     }
 }
