@@ -13,7 +13,6 @@ class FetchData {
                 }
             }).then(response => response.json()).then(data => data);
     }
-
     getUsers = () => {
         return fetch((`${apiUrl}/profile`),
             {
@@ -24,9 +23,7 @@ class FetchData {
 
                 }
             }).then(response => response.json()).then(data => data);
-
     }
-
     getPost = (type, id) => {
         let url = ''
         if (type === 'video') { url = `${apiUrl}/VideoPosts/${id}` }
@@ -44,20 +41,6 @@ class FetchData {
             }).then(response => response.json()).then(data => {
                 return data
             });
-
     }
-
-    // sendPost = () => {
-    //     return fetch()
-    //     {
-    //         method: 'POST',
-    //             headers: {
-    //             'key': apiKey,
-    //                 'SessionId': sessionId
-
-    //         }
-    //         body: JSON.stringify(data),
-    //     }
-    // }
 }
 export default new FetchData();

@@ -8,13 +8,14 @@ import FeedPage from './feedPage/FeedPage';
 import ProfilePage from './profilePage/ProfilePage';
 import PeoplePage from './peoplePage/PeoplePage';
 import PostPage from './postPage/PostPage'
+// import LogIn from '../app/logIn/LogIn';
+// import Register from '../app/logIn/Register';
 
-
-class App extends Component { 
+class App extends Component {
   render() {
     return (
       <div>
-      <Header />
+        <Header />
         <Switch>
           <Route exact path='/' component={FeedPage} />
           <Route path='/Feed' component={FeedPage} />
@@ -22,7 +23,7 @@ class App extends Component {
           <Route path='/:type/:id' component={PostPage} />
           <Route path='/Profile' component={ProfilePage} />
         </Switch>
-      <Footer />
+        <Footer />
       </div >
     );
   }
