@@ -6,7 +6,7 @@ const Header = props => {
         <header>
             <nav className="navbar navbar-expand-lg navbar-light header">
                 <div className="collapse navbar-collapse">
-                    <h4 className="h4header">BIT-Book</h4>
+                    <h4 className="h4header">Facebook</h4>
                 </div>
                 <div className="right">
                     <ul className="navbar-nav">
