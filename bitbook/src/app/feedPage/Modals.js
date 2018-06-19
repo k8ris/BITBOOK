@@ -33,9 +33,7 @@ class Modals extends React.Component {
         fetchData.sendPost({ text: this.state.text })
             .then(() => {
                 this.handlerCloseModal()
-                fetchData.getPosts().then(post => {
-                    this.props.set
-                })
+                this.props.loadPost
             })
     }
 
