@@ -17,7 +17,7 @@ class PostPage extends React.Component {
     componentDidMount() {
         const type = this.props.match.params.type;
         const id = this.props.match.params.id;
-
+        const userId = this.props.match.params
         fetchData.getPost(type, id).then(post => {
             this.setState({ post: post })
         })
@@ -25,7 +25,7 @@ class PostPage extends React.Component {
         fetchData.GetComments(id).then(comments => {
             this.setState({ comments: comments })
         })
-        fetchData.getUsers(id).then(users => {
+        fetchData.getUsers(userId).then(users => {
             this.setState({ users: users })
         })
 
@@ -44,7 +44,7 @@ class PostPage extends React.Component {
             <div>
                 <div>{this.pagePost()}</div>
                 <div>
-                    <div><img src={this.state.users.avatarUrl} alt='img' /></div>
+                    {/* <img className="card-img-top" src={this.state.users.avatarUrl} /> */}
                     <Comments comments={this.state.comments} />
                 </div>
             </div>
@@ -53,3 +53,7 @@ class PostPage extends React.Component {
 }
 
 export default PostPage
+
+
+
+{/* <div><img src={this.state.users.avatarUrl} alt='img' /></div> */ }

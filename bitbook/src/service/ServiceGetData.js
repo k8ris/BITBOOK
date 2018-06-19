@@ -57,7 +57,7 @@ class FetchData {
             })
     }
 
-    GetUsers = () => {
+    GetUsers = (userId) => {
         return fetch((`${apiUrl}/users`),
             {
                 method: 'get',
