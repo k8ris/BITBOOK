@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Login from '../logIn/Login';
+import LogIn from '../logIn/LogIn';
 
 const Header = props => {
     return (
@@ -19,11 +19,11 @@ const Header = props => {
                         <li className="nav-item headerProfile">
                             <Link className="nav-link" to="/Profile">Profile</Link>
                         </li>
-                        <li className="nav-item headerLogin">
-                            <Link className="nav-link" to="/Login">Log In</Link>
+                        <li className="nav-item headerLogIn">
+                            <Link className="nav-link" to="/LogIn">Log In</Link>
                         </li>
                         {/* <li className="nav-item or">
-                            <Link className="nav-link or" to="/Login">or</Link>
+                            <Link className="nav-link or" to="/LogIn">or</Link>
                         </li> */}
                         <li className="nav-item headerRegister">
                             <Link className="nav-link" to="/Register">Register</Link>
