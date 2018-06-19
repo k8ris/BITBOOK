@@ -8,7 +8,7 @@ import FeedPage from './feedPage/FeedPage';
 import ProfilePage from './profilePage/ProfilePage';
 import PeoplePage from './peoplePage/PeoplePage';
 import PostPage from './postPage/PostPage'
-import Login from '../app/logIn/Login';
+import LogIn from "../app/logIn/LogIn";
 import Register from '../app/logIn/Register';
 // import Register from '../app/logIn/Register';
 
@@ -18,8 +18,8 @@ class App extends Component {
       <div>
         <Header />
         <Switch>
-          <Route exact path="/" component={Login} />
-          <Route path="/Login" component={Login} />
+          <Route exact path="/" component={LogIn} />
+          <Route path="/Login" component={LogIn} />
           <Route path="/Register" component={Register} />
           {/* <Route path='/' component={FeedPage} /> */}
           <Route path='/Feed' component={FeedPage} />
