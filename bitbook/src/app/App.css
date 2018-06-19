@@ -431,9 +431,10 @@ h3{
 
 }
 
-.btn {
+.profileBtn {
   margin: 25px 40px;
   background: rgb(255, 255, 255);
+  border:0;
 }
 
 .badge {
@@ -452,3 +453,37 @@ padding: 220px 0px;
 margin: 220px 0px;
 }
 
+
+.peopleCard {
+  margin: 20px;
+  border: 1px solid grey;
+  width: 1000px;
+  padding: 5px;
+  box-shadow: 9px -1px 72px 6px rgba(201,191,201,1);
+  background-color: whitesmoke;
+   
+  
+}
+
+.card-img-top {
+  border-radius: 50% !important;
+  float: left;
+  height: 150px;
+   width: 150px !important;   
+   margin-top: 20px;
+   margin-left: 20px;
+   margin-bottom: 20px;
+   
+
+}
+
+.card-text { 
+  margin: auto;
+}
+
+
+.postCard {
+  text-align: right;
+  margin: 0 0;
+  
+}

@@ -23,7 +23,7 @@ class PeoplePage extends React.Component {
 
         return (
 
-            <div>
+            <div className="container">
                 {this.state.users.map(user => <PeopleItem user={user} />)}
 
             </div>
