@@ -57,7 +57,7 @@ class FetchData {
             })
     }
 
-    getUsers = () => {
+
     GetUsers = (userId) => {
         return fetch((`${apiUrl}/users`),
             {
@@ -81,7 +81,7 @@ class FetchData {
             }).then(response => response.json())
 
     }
-}
+
 
     GetComments = (id) => {
         return fetch((`${apiUrl}/Comments?postId=${id}`),
