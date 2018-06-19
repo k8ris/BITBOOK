@@ -5,7 +5,6 @@ const PeopleItem = (props) => {
 
     return (
 
-
         <div className="peopleCard row">
             <img className="card-img-top" src={props.user.avatarUrl} />
             <div className="card-body">
@@ -18,9 +17,6 @@ const PeopleItem = (props) => {
 
     )
 }
-
-
-
 
 export default PeopleItem;
 
