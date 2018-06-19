@@ -11,13 +11,8 @@ class Modals extends React.Component {
             text: ''
         };
     }
-
     handlerInputText = (event) => {
-
-
         this.setState({ text: event.target.value })
-
-
     }
     handlerOpenModal = () => {
         this.setState({ showModal: true });
@@ -25,11 +20,7 @@ class Modals extends React.Component {
     handlerCloseModal = () => {
         this.setState({ showModal: false });
     }
-
-
-
     post = () => {
-
         fetchData.sendPost({ text: this.state.text })
             .then(() => {
                 this.handlerCloseModal()
@@ -38,15 +29,8 @@ class Modals extends React.Component {
                 })
             })
     }
-
     componentDidMount() {
-
     }
-
-
-
-
-
     render() {
         return (
             <div>
@@ -74,7 +58,6 @@ class Modals extends React.Component {
             </div>)
     }
 }
-
 export default Modals;
 
 
