@@ -1,13 +1,15 @@
 import React from 'react';
 import fetchData from '../../service/ServiceGetData';
-import PeopleItem from './PeopleItem';
+import PeopleList from './PeopleList';
+import SearchPeople from './SearchPeople'
+
 
 class PeoplePage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             users: [],
-
+            inputValue: ''
         };
     }
 
@@ -17,23 +19,25 @@ class PeoplePage extends React.Component {
 
     };
 
+    handleChange = (event) => {
+        this.setState({ inputValue: event.target.value })
 
+    }
 
     render() {
 
         return (
 
             <div className="container">
-                {this.state.users.map(user => <PeopleItem user={user} />)}
+
+                <SearchPeople value={this.state.inputValue} onChange={this.handleChange} />
+                <PeopleList users={this.state.users} inputValue={this.state.inputValue} />
 
             </div>
         )
     }
 }
 
-
-
-
-
 export default PeoplePage;
 
+// {this.state.users.map(user => <PeopleItem user={user} />)}
