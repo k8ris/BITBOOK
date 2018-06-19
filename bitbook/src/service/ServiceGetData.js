@@ -57,7 +57,7 @@ class FetchData {
             })
     }
 
-    GetUsers = () => {
+    getUsers = () => {
         return fetch((`${apiUrl}/users`),
             {
                 method: 'get',
@@ -67,10 +67,23 @@ class FetchData {
                 }
             }).then(response => response.json()).then(data => data)
     }
+    logIn = (data) => {
+        return fetch((`${apiUrl}/login`),
+            {
+                method: 'POST',
+                headers: {
+                    'key': '3F8C391',
+                    'content-type': 'application/json'
+                },
 
+                body: JSON.stringify(data),
+            }).then(response => response.json())
 
-
-
-
+    }
 }
+
+
+
+
+
 export default new FetchData();

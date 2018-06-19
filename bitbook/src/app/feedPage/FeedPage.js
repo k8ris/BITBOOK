@@ -10,17 +10,14 @@ class FeedPage extends React.Component {
             posts: [],
         };
     }
-
     componentDidMount() {
         FetchData.getPosts().then(posts => {
             this.setState({ posts: posts });
         });
     }
-
     render() {
 
         return (
-
             <div className='feedPosts'>
                 <Modals />
                 <FeedLIst set={this.state.posts} posts={this.state.posts} />

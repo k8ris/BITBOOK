@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Login from '../logIn/Login';
 
 const Header = props => {
     return (
@@ -10,16 +11,22 @@ const Header = props => {
                 </div>
                 <div className="right">
                     <ul className="navbar-nav">
-
                         <li className="nav-item headerFeed">
                             <Link className="nav-link" to="/Feed">Feed</Link> </li>
                         <li className="nav-item" />
                         <li className="nav-item headerPeople">
                             <Link className="nav-link" to="/People">People</Link></li>
-
                         <li className="nav-item headerProfile">
                             <Link className="nav-link" to="/Profile">Profile</Link>
-
+                        </li>
+                        <li className="nav-item headerLogin">
+                            <Link className="nav-link" to="/Login">Log In</Link>
+                        </li>
+                        {/* <li className="nav-item or">
+                            <Link className="nav-link or" to="/Login">or</Link>
+                        </li> */}
+                        <li className="nav-item headerRegister">
+                            <Link className="nav-link" to="/Register">Register</Link>
                         </li>
                     </ul>
                 </div>
@@ -27,5 +34,4 @@ const Header = props => {
         </header>
     );
 };
-
 export default Header;
