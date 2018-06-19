@@ -28,7 +28,7 @@
   text-align: center;
   height: 55px;
   padding-top: 19px;
-  margin-top: 53px;
+  margin-top: 300px;
   margin-bottom: 0px;
   color: white;
   border-top: 1.2px solid black;
@@ -437,6 +437,10 @@ h3{
   border: 1px solid grey !important;
   padding: 5px 0px 5px  0px !important;
   color: black;
+.profileBtn {
+  margin: 25px 40px;
+  background: rgb(255, 255, 255);
+  border:0;
 }
 .btn-block{
   width: 130px !important;
@@ -515,4 +519,48 @@ btn-primary{
 }
 #registerMargin{
   padding-bottom: 98px;
+}
+.peopleCard {
+  margin: 20px;
+  border: 1px solid grey;
+  width: 1000px;
+  padding: 5px;
+  box-shadow: 9px -1px 72px 6px rgba(201,191,201,1);
+  background-color: whitesmoke;
+   
+  
+}
+
+.card-img-top {
+  border-radius: 50% !important;
+  float: left;
+  height: 150px;
+   width: 150px !important;   
+   margin-top: 20px;
+   margin-left: 20px;
+   margin-bottom: 20px;
+   
+
+}
+
+.card-text { 
+  margin: auto;
+}
+
+
+.postCard {
+  text-align: right;
+  margin: 0 0;
+  
+}
+
+.singlePost {
+  margin-top: 50px;
+  padding: 5px;
+  margin-left: 610px; 
+  border: 1px solid grey;
+  width: 680px;
+  box-shadow: 9px -1px 72px 6px rgba(201,191,201,1);
+  background-color: whitesmoke;
+ 
 }
