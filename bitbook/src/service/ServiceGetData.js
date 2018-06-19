@@ -68,9 +68,15 @@ class FetchData {
             }).then(response => response.json()).then(data => data)
     }
 
-
-
-
-
+    GetComments = (id) => {
+        return fetch((`${apiUrl}/Comments?postId=${id}`),
+            {
+                method: 'get',
+                headers: {
+                    'key': apiKey,
+                    'SessionId': sessionId
+                }
+            }).then(response => response.json()).then(data => data)
+    }
 }
 export default new FetchData();
