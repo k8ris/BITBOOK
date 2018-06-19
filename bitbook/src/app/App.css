@@ -28,7 +28,7 @@
   text-align: center;
   height: 60px;
   padding-top: 19px;
-  margin-top: 53px;
+  margin-top: 300px;
   margin-bottom: 0px;
   color: white;
   border-top: 1.2px solid black;
@@ -486,4 +486,15 @@ margin: 220px 0px;
   text-align: right;
   margin: 0 0;
   
+}
+
+.singlePost {
+  margin-top: 50px;
+  padding: 5px;
+  margin-left: 610px; 
+  border: 1px solid grey;
+  width: 680px;
+  box-shadow: 9px -1px 72px 6px rgba(201,191,201,1);
+  background-color: whitesmoke;
+ 
 }
