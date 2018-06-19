@@ -15,6 +15,14 @@ class FeedPage extends React.Component {
             this.setState({ posts: posts });
         });
     }
+
+    loadPost = () => {
+        FetchData.getPosts().then(posts => {
+            this.setState({ posts: posts });
+        });
+
+    }
+
     render() {
 
         return (
