@@ -13,6 +13,7 @@ import Register from '../app/logIn/Register';
 // import Register from '../app/logIn/Register';
 
 class App extends Component {
+
   render() {
     return (
       <div>

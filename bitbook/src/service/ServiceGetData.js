@@ -36,15 +36,27 @@ class FetchData {
                 headers: {
                     'key': apiKey,
                     'SessionId': sessionId
-
                 }
             }).then(response => response.json()).then(data => {
                 return data
             });
     }
-
     sendPost = (data) => {
         return fetch((`${apiUrl}/TextPosts`),
+            {
+                method: 'POST',
+                headers: {
+                    'key': apiKey,
+                    'SessionId': sessionId,
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(data),
+            })
+    }
+
+    sendComment = (data) => {
+
+        return fetch((`${apiUrl}/Comments`),
             {
                 method: 'POST',
                 headers: {
@@ -55,26 +67,12 @@ class FetchData {
 
                 body: JSON.stringify(data),
             })
-    } 
-
-    sendComment = (data) => {
-
-        return fetch((`${apiUrl}/Comments`),
-        {
-            method: 'POST',
-            headers: {
-                'key': apiKey,
-                'SessionId': sessionId,
-                'content-type': 'application/json'
-            },
-
-            body: JSON.stringify(data),
-        })
 
     }
 
 
-    GetUsers = () => {
+    // GetUsers = () => {
+    GetUsers = (userId) => {
         return fetch((`${apiUrl}/users`),
             {
                 method: 'get',
@@ -83,7 +81,7 @@ class FetchData {
                     'SessionId': sessionId
                 }
             }).then(response => response.json()).then(data => data)
-    } 
+    }
 
     GetUser = (userId) => {
         return fetch((`${apiUrl}/users/${userId}`),
@@ -94,25 +92,29 @@ class FetchData {
                     'SessionId': sessionId
                 }
             }).then(response => response.json()).then(data => data)
-    } 
+    }
 
 
 
     logIn = (data) => {
+    }
+    logIn = (email, password) => {
         return fetch((`${apiUrl}/login`),
             {
                 method: 'POST',
                 headers: {
                     'key': '3F8C391',
-                    'content-type': 'application/json'
+                    'content-type': 'application/json',
+
                 },
 
-                body: JSON.stringify(data),
-            }).then(response => response.json())
-
+                body: JSON.stringify({
+                    username: email,
+                    password: password,
+                })
+                // }).then(response => response.json())
+            })
     }
-
-
     GetComments = (id) => {
         return fetch((`${apiUrl}/Comments?postId=${id}`),
             {
