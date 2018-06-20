@@ -36,13 +36,11 @@ class FetchData {
                 headers: {
                     'key': apiKey,
                     'SessionId': sessionId
-
                 }
             }).then(response => response.json()).then(data => {
                 return data
             });
     }
-
     sendPost = (data) => {
         return fetch((`${apiUrl}/TextPosts`),
             {
@@ -52,7 +50,6 @@ class FetchData {
                     'SessionId': sessionId,
                     'content-type': 'application/json'
                 },
-
                 body: JSON.stringify(data),
             })
     } 
@@ -72,9 +69,13 @@ class FetchData {
         })
 
     }
+<<<<<<< HEAD
+    GetUsers = (userId) => {
+=======
 
 
     GetUsers = () => {
+>>>>>>> 25932efe05b4f6d6e731df9b9d9cd21801df8c4e
         return fetch((`${apiUrl}/users`),
             {
                 method: 'get',
@@ -83,6 +84,10 @@ class FetchData {
                     'SessionId': sessionId
                 }
             }).then(response => response.json()).then(data => data)
+<<<<<<< HEAD
+    }
+    logIn = (email, password) => {
+=======
     } 
 
     GetUser = (userId) => {
@@ -99,20 +104,23 @@ class FetchData {
 
 
     logIn = (data) => {
+>>>>>>> 25932efe05b4f6d6e731df9b9d9cd21801df8c4e
         return fetch((`${apiUrl}/login`),
             {
                 method: 'POST',
                 headers: {
                     'key': '3F8C391',
-                    'content-type': 'application/json'
+                    'content-type': 'application/json',
+
                 },
 
-                body: JSON.stringify(data),
-            }).then(response => response.json())
-
+                body: JSON.stringify({
+                    username: email,
+                    password: password,
+                })
+                // }).then(response => response.json())
+            })
     }
-
-
     GetComments = (id) => {
         return fetch((`${apiUrl}/Comments?postId=${id}`),
             {

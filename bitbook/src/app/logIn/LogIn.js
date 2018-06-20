@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
+import ServiceGetData from '../../service/ServiceGetData';
 
 export default class LogIn extends Component {
     constructor(props) {
@@ -9,6 +10,8 @@ export default class LogIn extends Component {
             email: "",
             password: "",
         };
+        this.sendData = this.sendData.bind(this)
+        this.handleChange = this.handleChange.bind(this);
     }
 
     validateForm() {
@@ -25,8 +28,11 @@ export default class LogIn extends Component {
         event.preventDefault();
     }
 
-
-
+    sendData = event => {
+        ServiceGetData.logIn(this.state.email, this.state.password)
+            .then((data) =>
+                sessionStorage.setItem('user', JSON.stringify(data.body)))
+    }
     render() {
         return (
             <div className="Login">
@@ -37,7 +43,7 @@ export default class LogIn extends Component {
                         <ControlLabel>Email:</ControlLabel>
                         <FormControl
                             autoFocus
-                            type="email"
+                            type="text"
                             value={this.state.email}
                             onChange={this.handleChange}
                             id='email'
@@ -55,7 +61,11 @@ export default class LogIn extends Component {
                     <Button
                         block
                         bsSize="large"
-                        onClick={!this.validateForm()}
+                        onClick={this.sendData}
+                        onClick={() => {
+                            !this.validateForm()
+                            this.sendData()
+                        }}
                         type="submit"
                     >
                         Log In
