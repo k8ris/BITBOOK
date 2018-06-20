@@ -27,8 +27,7 @@ class Modals extends React.Component {
                 this.props.loadPost
             })
     }
-    componentDidMount() {
-    }
+  
     render() {
         return (
             <div>
