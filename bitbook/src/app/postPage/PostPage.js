@@ -1,7 +1,7 @@
 import React from 'react';
 import fetchData from "../../service/ServiceGetData";
 import Comments from './Comments'
-
+import SendComment from './SendComment'
 
 class PostPage extends React.Component {
     constructor(props) {
@@ -9,27 +9,44 @@ class PostPage extends React.Component {
         this.state = {
             post: {},
             comments: [],
-            users: []
-
+            user: [],
+           
         };
     }
+    
+   
 
     componentDidMount() {
         const type = this.props.match.params.type;
         const id = this.props.match.params.id;
-        const userId = this.props.match.params
         fetchData.getPost(type, id).then(post => {
             this.setState({ post: post })
         })
-
+        
         fetchData.GetComments(id).then(comments => {
             this.setState({ comments: comments })
         })
-        fetchData.getUsers(userId).then(users => {
-            this.setState({ users: users })
+        // this.state.comments.map(comment => { 
+        // const userId = comment.authorId 
+
+        // fetchData.GetUser(userId).then(user => {
+            
+        // this.setState({ user: user })
+        // })})
+        // fetchData.GetUser(userId).then(user => {
+            
+        // this.setState({ user: user })
+        // })
+    }
+    
+    loadComment = () => { 
+        const id = this.props.match.params.id;
+        fetchData.GetComments(id).then(comments => {
+            this.setState({ comments: comments })
         })
 
     }
+
 
     pagePost() {
         const pState = this.state.post
@@ -43,9 +60,9 @@ class PostPage extends React.Component {
         return (
             <div>
                 <div>{this.pagePost()}</div>
+                <div> <SendComment loadComment={this.loadComment}/></div>
                 <div>
-                    {/* <img className="card-img-top" src={this.state.users.avatarUrl} /> */}
-                    <Comments comments={this.state.comments} />
+                    <Comments comments={this.state.comments} url={this.state.user.avatarUrl}  />
                 </div>
             </div>
         )

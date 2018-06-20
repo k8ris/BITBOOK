@@ -52,8 +52,30 @@ class FetchData {
                 },
                 body: JSON.stringify(data),
             })
+    } 
+
+    sendComment = (data) => {
+
+        return fetch((`${apiUrl}/Comments`),
+        {
+            method: 'POST',
+            headers: {
+                'key': apiKey,
+                'SessionId': sessionId,
+                'content-type': 'application/json'
+            },
+
+            body: JSON.stringify(data),
+        })
+
     }
+<<<<<<< HEAD
     GetUsers = (userId) => {
+=======
+
+
+    GetUsers = () => {
+>>>>>>> 25932efe05b4f6d6e731df9b9d9cd21801df8c4e
         return fetch((`${apiUrl}/users`),
             {
                 method: 'get',
@@ -62,8 +84,27 @@ class FetchData {
                     'SessionId': sessionId
                 }
             }).then(response => response.json()).then(data => data)
+<<<<<<< HEAD
     }
     logIn = (email, password) => {
+=======
+    } 
+
+    GetUser = (userId) => {
+        return fetch((`${apiUrl}/users/${userId}`),
+            {
+                method: 'get',
+                headers: {
+                    'key': apiKey,
+                    'SessionId': sessionId
+                }
+            }).then(response => response.json()).then(data => data)
+    } 
+
+
+
+    logIn = (data) => {
+>>>>>>> 25932efe05b4f6d6e731df9b9d9cd21801df8c4e
         return fetch((`${apiUrl}/login`),
             {
                 method: 'POST',

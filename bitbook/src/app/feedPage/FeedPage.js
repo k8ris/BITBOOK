@@ -27,7 +27,7 @@ class FeedPage extends React.Component {
 
         return (
             <div className='feedPosts'>
-                <Modals loadPost={this.loadPost()} />
+                <Modals loadPost={this.loadPost} />
                 <FeedLIst set={this.state.posts} posts={this.state.posts} />
             </ div>)
     }
