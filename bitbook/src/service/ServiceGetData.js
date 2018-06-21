@@ -70,60 +70,68 @@ class FetchData {
 
     }
 
-
-    // GetUsers = () => {
     GetUsers = (userId) => {
-        return fetch((`${apiUrl}/users`),
-            {
-                method: 'get',
-                headers: {
-                    'key': apiKey,
-                    'SessionId': sessionId
-                }
-            }).then(response => response.json()).then(data => data)
-    }
-
-    GetUser = (userId) => {
-        return fetch((`${apiUrl}/users/${userId}`),
-            {
-                method: 'get',
-                headers: {
-                    'key': apiKey,
-                    'SessionId': sessionId
-                }
-            }).then(response => response.json()).then(data => data)
-    }
 
 
+        // GetUsers = () => {
+        GetUsers = (userId) => {
+            GetUsers = () => {
+                return fetch((`${apiUrl}/users`),
+                    {
+                        method: 'get',
+                        headers: {
+                            'key': apiKey,
+                            'SessionId': sessionId
+                        }
+                    }).then(response => response.json()).then(data => data)
+            }
 
-    logIn = (data) => {
-    }
-    logIn = (email, password) => {
-        return fetch((`${apiUrl}/login`),
-            {
-                method: 'POST',
-                headers: {
-                    'key': '3F8C391',
-                    'content-type': 'application/json',
+        }
+        logIn = (email, password) => {
 
-                },
+            GetUser = (userId) => {
+                return fetch((`${apiUrl}/users/${userId}`),
+                    {
+                        method: 'get',
+                        headers: {
+                            'key': apiKey,
+                            'SessionId': sessionId
+                        }
+                    }).then(response => response.json()).then(data => data)
+            }
 
-                body: JSON.stringify({
-                    username: email,
-                    password: password,
-                })
-                // }).then(response => response.json())
-            })
-    }
-    GetComments = (id) => {
-        return fetch((`${apiUrl}/Comments?postId=${id}`),
-            {
-                method: 'get',
-                headers: {
-                    'key': apiKey,
-                    'SessionId': sessionId
-                }
-            }).then(response => response.json()).then(data => data)
-    }
-}
-export default new FetchData();
+
+
+            logIn = (data) => {
+            }
+            logIn = (email, password) => {
+
+                return fetch((`${apiUrl}/login`),
+                    {
+                        method: 'POST',
+                        headers: {
+                            'key': '3F8C391',
+                            'content-type': 'application/json',
+
+                        },
+
+                        body: JSON.stringify({
+                            username: email,
+                            password: password,
+                        })
+                        // }).then(response => response.json())
+                    })
+            }
+            GetComments = (id) => {
+                return fetch((`${apiUrl}/Comments?postId=${id}`),
+                    {
+                        method: 'get',
+                        headers: {
+                            'key': apiKey,
+                            'SessionId': sessionId
+                        }
+                    }).then(response => response.json()).then(data => data)
+            }
+        }
+
+        export default new FetchData();
