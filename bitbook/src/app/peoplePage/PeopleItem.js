@@ -5,7 +5,9 @@ const PeopleItem = (props) => {
 
     return (
 
+
         <div className="peopleCard row">
+
             <img className="card-img-top" src={props.user.avatarUrl} />
             <div className="card-body">
                 <h2 className="card-title">{props.user.name}</h2>
@@ -13,7 +15,9 @@ const PeopleItem = (props) => {
                 <p className="postCard"><small class="text-muted">Last post at</small></p>
                 <p className="postCard"><small class="text-muted">{props.user.lastPostDate}</small></p>
             </div>
+
         </div>
+
 
     )
 }

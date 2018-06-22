@@ -10,11 +10,11 @@ class PostPage extends React.Component {
             post: {},
             comments: [],
             user: [],
-           
+
         };
     }
-    
-   
+
+
 
     componentDidMount() {
         const type = this.props.match.params.type;
@@ -22,7 +22,7 @@ class PostPage extends React.Component {
         fetchData.getPost(type, id).then(post => {
             this.setState({ post: post })
         })
-        
+
         fetchData.GetComments(id).then(comments => {
             this.setState({ comments: comments })
         })
@@ -30,16 +30,16 @@ class PostPage extends React.Component {
         // const userId = comment.authorId 
 
         // fetchData.GetUser(userId).then(user => {
-            
+
         // this.setState({ user: user })
         // })})
         // fetchData.GetUser(userId).then(user => {
-            
+
         // this.setState({ user: user })
         // })
     }
-    
-    loadComment = () => { 
+
+    loadComment = () => {
         const id = this.props.match.params.id;
         fetchData.GetComments(id).then(comments => {
             this.setState({ comments: comments })
@@ -60,9 +60,9 @@ class PostPage extends React.Component {
         return (
             <div>
                 <div>{this.pagePost()}</div>
-                <div> <SendComment loadComment={this.loadComment}/></div>
+                <div> <SendComment loadComment={this.loadComment} /></div>
                 <div>
-                    <Comments comments={this.state.comments} url={this.state.user.avatarUrl}  />
+                    <Comments postId={this.state.post.id} url={this.state.user.avatarUrl} />
                 </div>
             </div>
         )

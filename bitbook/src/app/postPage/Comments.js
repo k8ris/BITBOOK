@@ -1,20 +1,35 @@
 import React from 'react'
 
-const Comments = (props) => {
+class Comments extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            user: [],
+        };
+    }
 
+    componentDidMount() {
 
-    return (
-        props.comments.map(comment => {
-
-            return (
-                <div className="singlePost"> 
-                    <img className="card-img-top" src={props.url} />
-                    <h2 className="card-title">{comment.authorName}</h2>
-                    <p className="card-text">{comment.body}</p>
-                </div>
-            )
+        fetchData.GetUser(userId).then(user => {
+            this.setState({ user: user })
         })
-    )
+    }
+
+    render() {
+
+        return (
+            props.comments.map(comment => {
+
+                return (
+                    <div className="singlePost">
+                        <img className="card-img-top" src={this.state.user} />
+                        <h2 className="card-title">{comment.authorName}</h2>
+                        <p className="card-text">{comment.body}</p>
+                    </div>
+                )
+            })
+        )
+    }
 }
 
 export default Comments
